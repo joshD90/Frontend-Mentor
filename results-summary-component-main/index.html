@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section role="main" class="main-section">
+      <div class="container">
+        <div class="score-section">
+          <h1>Your Result</h1>
+          <div class="score-number">
+            <p>76</p>
+            <span>of 100</span>
+          </div>
+          <div class="score-comment">
+            <h2>Great</h2>
+            <p>
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+        <div class="breakdown-section">
+          <h2>Summary</h2>
+          <div class="summary-segments-container">
+            <div class="summary-segment red">
+              <div class="summary-segment-left">
+                <img src="./assets/images/icon-reaction.svg" alt="reaction" />
+                <p>Reaction</p>
+              </div>
+              <div class="summary-segment-score">
+                <span>80</span> <span>/ 100</span>
+              </div>
+            </div>
+
+            <div class="summary-segment yellow">
+              <div class="summary-segment-left">
+                <img src="./assets/images/icon-memory.svg" alt="memory" />
+                <p>Memory</p>
+              </div>
+              <div class="summary-segment-score">
+                <span>92</span> <span>/ 100</span>
+              </div>
+            </div>
+
+            <div class="summary-segment green">
+              <div class="summary-segment-left">
+                <img src="./assets/images/icon-verbal.svg" alt="verbal" />
+                <p>Verbal</p>
+              </div>
+              <div class="summary-segment-score">
+                <span>61</span> <span>/ 100</span>
+              </div>
+            </div>
+
+            <div class="summary-segment blue">
+              <div class="summary-segment-left">
+                <img src="./assets/images/icon-visual.svg" alt="visual" />
+                <p>Visual</p>
+              </div>
+              <div class="summary-segment-score">
+                <span>72</span> <span>/ 100</span>
+              </div>
+            </div>
+          </div>
+          <button>Continue</button>
+        </div>
+      </div>
+      <div class="attribution" role="footer">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </section>
+  </body>
+</html>
