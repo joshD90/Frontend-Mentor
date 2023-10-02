@@ -8,11 +8,14 @@ body {
   --paleBlue: hsl(221, 100%, 96%);
   --lightLavender: hsl(241, 100%, 89%);
   --darkGrayBlue: hsl(224, 30%, 27%);
+  --lighterLavender: hsla(241, 100%, 89%, 0.3);
 
   /* gradients */
   /* bg */
   --lightSlateBlue: hsl(252, 100%, 67%);
   --lightRoyalBlue: hsl(241, 81%, 54%);
+  --lightRoyalBlueShadow: hsla(241, 81%, 54%, 0.25);
+
   /* circle */
   --violetBlue: hsla(256, 72%, 46%, 1);
   --persianBlue: hsla(241, 72%, 46%, 0);
@@ -104,7 +107,52 @@ body {
   padding: 0 0.5rem;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  position: relative;
 }
+.summary-segment::before,
+.summary-segment::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+.summary-segment::before {
+  top: 0;
+  left: 0;
+  border-left: 1px solid var(--lighterLavender);
+  border-top: 1px solid var(--lighterLavender);
+  border-top-left-radius: 7px;
+}
+.summary-segment::after {
+  top: 0;
+  right: 0;
+  border-right: 1px solid var(--lighterLavender);
+  border-top: 1px solid var(--lighterLavender);
+  border-top-right-radius: 7px;
+}
+.psuedo-div::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid var(--lighterLavender);
+  border-bottom: 1px solid var(--lighterLavender);
+  border-bottom-left-radius: 7px;
+}
+.psuedo-div::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  border-right: 1px solid var(--lighterLavender);
+  border-bottom: 1px solid var(--lighterLavender);
+  border-bottom-right-radius: 7px;
+}
+
 .summary-segment-left {
   display: flex;
   align-items: center;
@@ -151,8 +199,10 @@ body {
   cursor: pointer;
 }
 
-.breakdown-section button:hover {
-  background-color: hsla(224, 30%, 27%, 0.98);
+.breakdown-section button:hover,
+:focus {
+  /* background-color: hsla(224, 30%, 27%, 0.98); */
+  background-color: var(--violetBlue);
 }
 
 @media (min-width: 768px) {
@@ -169,8 +219,7 @@ body {
     max-width: fit-content;
     display: flex;
     margin: 0 3rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 25px 50px -12px var(--lightRoyalBlueShadow);
     border-radius: 1.5rem;
   }
 
