@@ -2,6 +2,133 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
+  width: 100vw;
+  background-color: hsl(36, 100%, 99%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+}
+.nav .nav-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 4px;
+  gap: 0.3rem;
+}
+.nav .nav-burger span {
+  border: 2px solid black;
+  width: 2.5rem;
+}
+.nav .nav-items {
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  padding-left: 2rem;
+  display: none;
+}
+.nav .nav-items span {
+  position: absolute;
+  font-size: 2rem;
+  top: 1rem;
+  right: 1rem;
+}
+.nav .nav-items a {
+  font-size: 1.5rem;
+  color: black;
+}
+.nav .nav-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  margin-top: 30%;
+}
+
+.content {
+  width: 100%;
+  padding: 1rem;
+}
+.content .bright-future {
+  width: 100%;
+}
+.content .bright-future img {
+  width: 100%;
+}
+.content .bright-future h1 {
+  font-size: 3rem;
+  font-style: bold;
+  margin: 0.5rem 0;
+}
+.content .bright-future p {
+  font-size: 1.5rem;
+  color: hsl(236, 13%, 42%);
+}
+.content .bright-future button {
+  padding: 1rem 2rem;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  color: hsl(36, 100%, 99%);
+  font-size: 1.5rem;
+}
+
+.new-section {
+  padding: 1rem;
+  width: 100%;
+}
+.new-section .inset {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  padding: 1rem;
+}
+.new-section .inset h2 {
+  color: hsl(35, 77%, 62%);
+}
+.new-section .inset div {
+  margin: 2rem 0;
+}
+.new-section .inset p {
+  color: hsl(233, 8%, 79%);
+}
+
+.ranked-stories {
+  padding: 1rem;
+  width: 100%;
+}
+.ranked-stories .story-container {
+  display: flex;
+  margin: 1rem 0;
+  width: 100%;
+}
+.ranked-stories .story-container img {
+  flex: 1;
+  max-width: 33%;
+}
+.ranked-stories .story-container div {
+  flex: 2;
+  padding-left: 1rem;
+}
+.ranked-stories .story-container div h3 {
+  color: gray;
+}
+.ranked-stories .story-container div h4 {
+  font-style: bold;
+}
+.ranked-stories .story-container div p {
+  color: hsl(236, 13%, 42%);
 }
 
 /*# sourceMappingURL=styles.css.map */

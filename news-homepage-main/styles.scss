@@ -1,5 +1,150 @@
+// Primary-Colors
+
+$softOrange: hsl(35, 77%, 62%);
+$softRed: hsl(5, 85%, 63%);
+
+// Neutral-Colors
+
+$offWhite: hsl(36, 100%, 99%);
+$grayishBlue: hsl(233, 8%, 79%);
+$darkGrayishBlue: hsl(236, 13%, 42%);
+$veryDarkBlue: hsl(240, 100%, 5%);
+
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
+  width: 100vw;
+  background-color: $offWhite;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+
+  .nav-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4px;
+    gap: 0.3rem;
+
+    span {
+      border: 2px solid black;
+      width: 2.5rem;
+    }
+  }
+  .nav-items {
+    // display: none;
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding-left: 2rem;
+    display: none;
+    span {
+      position: absolute;
+      font-size: 2rem;
+      top: 1rem;
+      right: 1rem;
+    }
+    a {
+      font-size: 1.5rem;
+      color: black;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 50%;
+      margin-top: 30%;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  padding: 1rem;
+
+  .bright-future {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+    h1 {
+      font-size: 3rem;
+      font-style: bold;
+      margin: 0.5rem 0;
+    }
+    p {
+      font-size: 1.5rem;
+      color: $darkGrayishBlue;
+    }
+    button {
+      padding: 1rem 2rem;
+      background-color: $softRed;
+      border: none;
+      color: $offWhite;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.new-section {
+  padding: 1rem;
+  width: 100%;
+  .inset {
+    background-color: $veryDarkBlue;
+    color: $offWhite;
+    padding: 1rem;
+    h2 {
+      color: $softOrange;
+    }
+    div {
+      margin: 2rem 0;
+    }
+    p {
+      color: $grayishBlue;
+    }
+  }
+}
+
+.ranked-stories {
+  padding: 1rem;
+  width: 100%;
+  .story-container {
+    display: flex;
+    margin: 1rem 0;
+    width: 100%;
+    img {
+      flex: 1;
+      max-width: 33%;
+    }
+    div {
+      flex: 2;
+      padding-left: 1rem;
+
+      h3 {
+        color: gray;
+      }
+      h4 {
+        font-style: bold;
+      }
+      p {
+        color: $darkGrayishBlue;
+      }
+    }
+  }
 }
