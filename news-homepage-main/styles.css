@@ -16,7 +16,6 @@ a {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
   padding: 1rem;
 }
 .nav .nav-burger {
@@ -57,9 +56,31 @@ a {
   height: 50%;
   margin-top: 30%;
 }
+@media screen and (min-width: 768px) {
+  .nav .nav-burger {
+    display: none;
+  }
+  .nav .nav-items {
+    height: fit-content;
+    position: static;
+    display: block;
+    width: 100%;
+  }
+  .nav .nav-items span {
+    display: none;
+  }
+  .nav .nav-items div {
+    flex-direction: row;
+    margin: 0;
+    gap: 1rem;
+    justify-content: end;
+  }
+  .nav .nav-items a {
+    color: hsl(236, 13%, 42%);
+  }
+}
 
 .content {
-  width: 100%;
   padding: 1rem;
 }
 .content .bright-future {
@@ -84,10 +105,24 @@ a {
   color: hsl(36, 100%, 99%);
   font-size: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .content {
+    grid-column: span 2;
+  }
+  .content .bright-future {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content .bright-future h1 {
+    width: 50%;
+  }
+  .content .bright-future p {
+    flex-basis: 50%;
+  }
+}
 
 .new-section {
   padding: 1rem;
-  width: 100%;
 }
 .new-section .inset {
   background-color: hsl(240, 100%, 5%);
@@ -103,10 +138,8 @@ a {
 .new-section .inset p {
   color: hsl(233, 8%, 79%);
 }
-
 .ranked-stories {
   padding: 1rem;
-  width: 100%;
 }
 .ranked-stories .story-container {
   display: flex;
@@ -129,6 +162,22 @@ a {
 }
 .ranked-stories .story-container div p {
   color: hsl(236, 13%, 42%);
+}
+@media screen and (min-width: 768px) {
+  .ranked-stories {
+    grid-column: span 3;
+    display: flex;
+  }
+  .ranked-stories img {
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,6 +10,11 @@ $grayishBlue: hsl(233, 8%, 79%);
 $darkGrayishBlue: hsl(236, 13%, 42%);
 $veryDarkBlue: hsl(240, 100%, 5%);
 
+// Breakpoints
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -28,7 +33,7 @@ a {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
+
   padding: 1rem;
 
   .nav-burger {
@@ -70,10 +75,33 @@ a {
       margin-top: 30%;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .nav-burger {
+      display: none;
+    }
+    .nav-items {
+      height: fit-content;
+      position: static;
+      display: block;
+      width: 100%;
+      span {
+        display: none;
+      }
+      div {
+        flex-direction: row;
+        margin: 0;
+        gap: 1rem;
+        justify-content: end;
+      }
+      a {
+        color: $darkGrayishBlue;
+      }
+    }
+  }
 }
 
 .content {
-  width: 100%;
   padding: 1rem;
 
   .bright-future {
@@ -99,11 +127,24 @@ a {
       font-size: 1.5rem;
     }
   }
+  @media screen and (min-width: $screen-md) {
+    grid-column: span 2;
+    .bright-future {
+      display: flex;
+      flex-wrap: wrap;
+      h1 {
+        width: 50%;
+      }
+      p {
+        flex-basis: 50%;
+      }
+    }
+  }
 }
 
 .new-section {
   padding: 1rem;
-  width: 100%;
+  // width: 100%;
   .inset {
     background-color: $veryDarkBlue;
     color: $offWhite;
@@ -118,15 +159,19 @@ a {
       color: $grayishBlue;
     }
   }
+  @media screen and (min-width: $screen-md) {
+  }
 }
 
 .ranked-stories {
   padding: 1rem;
-  width: 100%;
+  // width: 100%;
+
   .story-container {
     display: flex;
     margin: 1rem 0;
     width: 100%;
+
     img {
       flex: 1;
       max-width: 33%;
@@ -145,5 +190,19 @@ a {
         color: $darkGrayishBlue;
       }
     }
+  }
+  @media screen and (min-width: $screen-md) {
+    grid-column: span 3;
+    display: flex;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .main-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
