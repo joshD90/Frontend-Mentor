@@ -127,17 +127,26 @@ a {
       font-size: 1.5rem;
     }
   }
+
   @media screen and (min-width: $screen-md) {
     grid-column: span 2;
+    height: 70vh;
+    border: 5px solid red;
+
     .bright-future {
-      display: flex;
-      flex-wrap: wrap;
-      h1 {
-        width: 50%;
-      }
-      p {
-        flex-basis: 50%;
-      }
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(5, 100px);
+    }
+
+    img {
+      object-fit: cover;
+      grid-column: span 10;
+      grid-row: span 2;
+    }
+    h1 {
+      color: green;
+      grid-column: 5;
     }
   }
 }
@@ -193,6 +202,7 @@ a {
   }
   @media screen and (min-width: $screen-md) {
     grid-column: span 3;
+
     display: flex;
     img {
       object-fit: cover;
@@ -204,5 +214,6 @@ a {
   .main-body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border: 5px solid blue;
   }
 }
