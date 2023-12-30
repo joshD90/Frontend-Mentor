@@ -20,21 +20,60 @@
     <link rel="stylesheet" href="./styles.css" />
 
     <title>Frontend Mentor | Expenses chart component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun Total
-    this month $478.33 +2.4% from last month
+    <section class="main-container">
+      <div class="main-container__balance">
+        <div class="balance-text">
+          <h2>My balance</h2>
+          <p>$921.48</p>
+        </div>
+        <div class="balance-shapes">
+          <div class="balance-shapes__border"></div>
+          <div class="balance-shapes__filled"></div>
+        </div>
+      </div>
+      <div class="main-container__spending">
+        <h2>Spending - Last 7 days</h2>
+
+        <div class="chart">
+          <!-- <div class="spend-data-point">
+            <div></div>
+            <span>mon</span>
+          </div>
+          <div class="spend-data-point">
+            <div></div>
+            <span>tues</span>
+          </div>
+          <div class="spend-data-point">
+            <div></div>
+            <span>wed</span>
+          </div>
+          <div class="spend-data-point">
+            <div></div>
+            <span>thurs</span>
+          </div>
+          <div class="spend-data-point">
+            <div></div>
+            <span>fri</span>
+          </div>
+          <div class="spend-data-point">
+            <div></div>
+            <span>sat</span>
+          </div>
+          <div class="spend-data-point">
+            <div></div>
+            <span>sun</span>
+          </div> -->
+        </div>
+        <hr />
+        <div class="total">
+          <div></div>
+          <p>Total this month</p>
+          <span>$478.33 +2.4% from last month</span>
+        </div>
+      </div>
+    </section>
 
     <div class="attribution">
       Challenge by
@@ -42,5 +81,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

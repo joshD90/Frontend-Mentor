@@ -1,7 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
   font-family: "Outfit";
+  background-color: hsl(27, 66%, 92%);
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+}
+
+.main-container__balance {
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(33, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+}
+.main-container__balance .balance-text h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.main-container__balance .balance-text p {
+  font-size: 1.5rem;
+}
+.main-container__balance .balance-shapes {
+  display: flex;
+  align-items: center;
+}
+.main-container__balance .balance-shapes__border {
+  height: 4rem;
+  width: 4rem;
+  border: 4px solid hsl(27, 66%, 92%);
+  border-radius: 50%;
+  z-index: 1;
+}
+.main-container__balance .balance-shapes__filled {
+  height: 4rem;
+  width: 4rem;
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 50%;
+  margin-left: -25%;
+}
+
+.main-container__spending {
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.main-container__spending h2 {
+  color: hsl(25, 47%, 15%);
+  font-weight: 400;
+}
+.main-container__spending .chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.main-container__spending .chart .spend-data-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12%;
+}
+.main-container__spending .chart .spend-data-point div {
+  background-color: hsl(10, 79%, 65%);
+  width: 100%;
+  height: 5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.main-container__spending .chart .spend-data-point div:hover {
+  background-color: hsl(186, 34%, 60%);
+}
+.main-container__spending .chart .spend-data-point span {
+  color: hsl(28, 10%, 53%);
+}
+.main-container__spending hr {
+  width: 90%;
+  color: hsl(28, 10%, 53%);
+  margin: 1rem auto;
+}
+.main-container__spending .total {
+  color: hsl(25, 47%, 15%);
 }
 
 /*# sourceMappingURL=styles.css.map */
