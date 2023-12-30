@@ -18,7 +18,7 @@ body {
   background-color: $cream;
   margin: 0;
   padding: 0;
-  min-height: screen;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 479px) {
