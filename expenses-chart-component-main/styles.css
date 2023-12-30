@@ -9,11 +9,22 @@ body {
   background-color: hsl(27, 66%, 92%);
   margin: 0;
   padding: 0;
+  min-height: screen;
 }
 
+@media screen and (min-width: 479px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
+  justify-self: end;
 }
 
 .attribution a {
@@ -24,8 +35,15 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 1rem;
+  max-width: 480px;
 }
 
+@media screen and (min-width: 480px) {
+  .main-container {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+  }
+}
 .main-container__balance {
   background-color: hsl(10, 79%, 65%);
   color: hsl(33, 100%, 98%);
@@ -35,14 +53,24 @@ body {
   border-radius: 1rem;
   align-items: center;
 }
+.main-container__balance .balance-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
 .main-container__balance .balance-text h2 {
   padding: 0;
   margin: 0;
   font-size: 1.2rem;
   font-style: normal;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 .main-container__balance .balance-text p {
   font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 .main-container__balance .balance-shapes {
   display: flex;
@@ -83,6 +111,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 12%;
+  position: relative;
+  margin-top: 3rem;
 }
 .main-container__spending .chart .spend-data-point div {
   background-color: hsl(10, 79%, 65%);
@@ -91,11 +121,24 @@ body {
   border-radius: 0.2rem;
   cursor: pointer;
 }
-.main-container__spending .chart .spend-data-point div:hover {
+.main-container__spending .chart .spend-data-point .top-spend-day {
   background-color: hsl(186, 34%, 60%);
 }
 .main-container__spending .chart .spend-data-point span {
   color: hsl(28, 10%, 53%);
+}
+.main-container__spending .chart .spend-data-point .spend-amount-span {
+  background-color: hsl(25, 47%, 15%);
+  padding: 0.3rem;
+  border-radius: 5px;
+  position: absolute;
+  top: -2rem;
+  z-index: 1;
+  font-size: 0.8rem;
+  width: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-container__spending hr {
   width: 90%;
@@ -104,6 +147,33 @@ body {
 }
 .main-container__spending .total {
   color: hsl(25, 47%, 15%);
+  display: flex;
+  justify-content: space-between;
+}
+.main-container__spending .total .total__left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.main-container__spending .total .total__left p {
+  color: hsl(28, 10%, 53%);
+  font-size: 1rem;
+}
+.main-container__spending .total .total__left span {
+  color: hsl(25, 47%, 15%);
+  font-size: 1.5rem;
+}
+.main-container__spending .total .total__right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 1rem;
+}
+.main-container__spending .total .total__right p {
+  color: hsl(25, 47%, 15%);
+}
+.main-container__spending .total .total__right span {
+  color: hsl(28, 10%, 53%);
 }
 
 /*# sourceMappingURL=styles.css.map */

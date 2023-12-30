@@ -18,11 +18,23 @@ body {
   background-color: $cream;
   margin: 0;
   padding: 0;
+  min-height: screen;
+}
+
+@media screen and (min-width: 479px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  justify-self: end;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -32,6 +44,15 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 1rem;
+  max-width: 480px;
+}
+
+@media screen and (min-width: 480px) {
+  .main-container {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+  }
 }
 
 .main-container__balance {
@@ -44,14 +65,22 @@ body {
   align-items: center;
 
   .balance-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
     h2 {
       padding: 0;
       margin: 0;
       font-size: 1.2rem;
       font-style: normal;
+      font-weight: 400;
+      margin-bottom: 1rem;
     }
     p {
       font-size: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -95,6 +124,8 @@ body {
       flex-direction: column;
       align-items: center;
       width: 12%;
+      position: relative;
+      margin-top: 3rem;
       div {
         background-color: $softRed;
         width: 100%;
@@ -102,11 +133,24 @@ body {
         border-radius: 0.2rem;
         cursor: pointer;
       }
-      div:hover {
+      .top-spend-day {
         background-color: $cyan;
       }
       span {
         color: $mediumBrown;
+      }
+      .spend-amount-span {
+        background-color: $darkBrown;
+        padding: 0.3rem;
+        border-radius: 5px;
+        position: absolute;
+        top: -2rem;
+        z-index: 1;
+        font-size: 0.8rem;
+        width: 110%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -119,5 +163,36 @@ body {
 
   .total {
     color: $darkBrown;
+    display: flex;
+    justify-content: space-between;
+
+    .total__left {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      p {
+        color: $mediumBrown;
+        font-size: 1rem;
+      }
+      span {
+        color: $darkBrown;
+        font-size: 1.5rem;
+      }
+    }
+
+    .total__right {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      font-size: 1rem;
+
+      p {
+        color: $darkBrown;
+      }
+      span {
+        color: $mediumBrown;
+      }
+    }
   }
 }
